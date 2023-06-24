@@ -40,4 +40,3 @@ workflows:
     myWorkflow:
       jobs:
         - configure_infrastructure
-        #
