@@ -20,7 +20,7 @@ orbs:
 # Define the jobs we want to run for this project
 jobs:
   bash:
-    create_infrastructure:  # Choose any name, such as `build`
+  create_infrastructure:  # Choose any name, such as `build`
         # The primary container, where your job's commands will run
         docker:
           - image: amazon/aws-cli
@@ -54,6 +54,7 @@ jobs:
               name: Test job
               # Fail the job intentionally to simulate an error.
               command:  return 1
+            when: on_fail
           - destroy_environment
 
 # Sequential workflow
