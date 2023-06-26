@@ -112,7 +112,6 @@ jobs:
               command: |
                 export OldBucketID=$(cat ~/textfile.txt)
                 aws s3 rm "s3://${OldBucketID}" --recursive
-"""
 workflows:
     my_workflow:
       jobs:
@@ -125,4 +124,3 @@ workflows:
             requires:
               - get_last_deployment_id
               - promote_to_production
-"""
